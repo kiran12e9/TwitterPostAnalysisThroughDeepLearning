@@ -1,0 +1,23 @@
+body{
+    background-color:rgba(180, 235, 235, 0.877);
+}
+
+.loginform{
+    margin:auto;
+    width:20%;
+    padding:10px;
+    
+    margin-left: 40%;
+    border-style:solid;
+    border-color: rgb(171, 145, 196);
+  background-color: white;
+  margin-top:10px;
+}
+
+button{
+    border-radius: 5px;
+    color:green;
+    padding:15px;
+    width:150px;
+}
+

@@ -1,0 +1,165 @@
+.header{
+    font-size: 50px;
+    padding:5px;
+    background-color:#20262E;
+    color:rgba(15, 104, 177, 0.911);
+    margin-top:0px;
+    text-align: center;
+    font-family:cursive;
+    font-weight: 400;
+   
+}
+
+
+
+
+
+body{
+    margin:0px;
+    margin-bottom:1px;
+}
+
+.titleimage{
+vertical-align:middle;
+width:30%;
+display:inline-block;
+height:80px;
+
+}
+
+body{
+    background-color: #DAF5FF;
+}
+.textbox{
+width:50%;
+margin:auto;
+margin-top:20px;
+border:2px solid rgb(92, 159, 231);
+border-radius:10px;
+padding:25px;
+background-color: white;
+}
+
+.entertext{
+    color:rgba(10, 82, 237, 0.889);
+    font-size:25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:600;
+    
+    
+}
+span{
+    background-color:rgb(173, 173, 237);
+    
+}
+
+ textarea:hover{
+    border-radius: 10px;
+    border-width: 1px;
+    border-style:solid;
+    border-color:green;
+    background-color:lavender ;
+    
+}
+
+textarea{
+    border-radius: 10px;
+    border-width: 1px;
+    border-style:solid;
+    border-color: blue;
+    
+}
+
+
+.btn{
+border-radius: 15px;
+width:200px;
+padding:15px;
+margin:5px;
+font-size: medium;
+font-family:cursive ;
+border-color: aqua;
+display:inline-block;
+}
+
+.btn:hover{
+border-radius:20px;
+width:200px;
+padding:20px;
+margin:5px;
+background-color:rgba(104, 64, 142, 0.534);
+color:white;
+font-size: medium;
+font-family:cursive ;
+cursor:pointer; 
+border-color:aliceblue;
+}
+
+.tweettext{
+    color:black;
+    font-size:40px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:400px;
+    
+    
+
+}
+
+.texta{
+margin:auto;
+width:100%;
+}
+input[type="text"] {
+    font-size: 16px;
+  }
+.linktweet{
+    color:rgba(20, 106, 177, 0.895);
+    float:right;
+    margin-top:15px;
+    text-decoration: underline;
+    font-size:25px;
+    font-weight: 500;
+}
+
+.linktweet:hover{
+    
+    float:right;
+    margin-top:15px;
+    text-decoration: underline;
+    font-size:25px;
+    cursor: pointer;
+    
+}
+
+#quote{
+    font-size: medium;
+    padding:10px;
+    margin:0px;
+    color:yellowgreen;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    
+    text-align:center;
+    background-color: black;
+}
+
+
+.status{
+    color:green;
+    font-family:cursive;
+    background-color: black;
+    font-weight:500;
+    font-style: italic;
+    margin:auto;
+    width:50%;
+    margin-top:50px;
+    font-size:40px;
+    border-style: solid;
+    border-radius: 10px;
+    padding:10px;
+}
+
+
+
+
+

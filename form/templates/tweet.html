@@ -1,0 +1,66 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Through Tweets</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/text.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/logout.css' %}">
+</head>
+<body>
+    
+   
+    <div class="header">
+        <div class="title">Depression Analysis Through Deep Learning</div>
+        <img class="titleimage" src="{% static '/images/imagetitle2.png' %}" alt="title image">
+      </div>
+
+
+      
+      
+      
+      <script type="text/javascript">
+          var quotes = {{ quotes|safe }};
+          var index = 0;
+  
+          function displayQuote() {
+              document.getElementById('quote').innerHTML = quotes[index];
+              index = (index + 1) % quotes.length;
+              setTimeout(displayQuote, 3000);
+          }
+  
+          window.onload = displayQuote;
+      </script>
+
+      
+      <div id="quote" ></div>
+      <div class="textbox">
+    <form action="{% url 'tweet' %}" method="post">
+        {% csrf_token %}
+        <p class="entertext"> Input the Twitter Username:</p>
+       
+        <textarea class="tweetarea" type="text" name="usernaam" required rows="3" cols="100"></textarea><br>
+        <br><br>
+        <button type="submit" class="btn" >Analyse the tweets</button>
+        <a href="{% url 'form' %}"  class="linktweet">Analyse through Text?</a>
+    </form>
+    <h2 style="color:red;font-size:40px;">{{er}}</h2>
+    
+
+    </div>
+    <div class="log">
+        <form method="post" action="{% url 'userlogout' %}">
+            {% csrf_token %}
+            <button class="butn" type="submit" >Logout</button>
+        </form>
+    </div>
+
+    
+    
+   
+</body>
+</html>

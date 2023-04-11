@@ -1,0 +1,19 @@
+.log{
+    background-color: rgb(17, 133, 200);
+    width:fit-content;
+    margin:auto;
+    margin-top:10px;
+    padding:5px;
+    
+
+}
+
+.butn{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.butn:hover{
+    color:white;
+    background-color: rgb(43, 45, 188);
+}

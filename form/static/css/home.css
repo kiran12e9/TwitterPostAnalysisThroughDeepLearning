@@ -1,0 +1,43 @@
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border-style: solid;
+    border-color: rgb(80, 80, 138);
+    width: 35%;
+    margin:auto;
+    height: 400px;
+    margin-top:15px;
+    background-color:white;
+    border-radius: 10%;
+  }
+
+  /* Style the buttons */
+  .button {
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Style the hover state of the buttons */
+body{
+    background-color:rgba(48, 154, 154, 0.859)
+}
+
+.button:hover {
+    border: 2px solid #ccc;
+    padding: 10px 20px;
+    font-size: 18px;
+    color:blueviolet;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }

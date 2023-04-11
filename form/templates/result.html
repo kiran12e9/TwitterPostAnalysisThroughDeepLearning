@@ -1,0 +1,71 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/result.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/logout.css' %}">
+</head>
+<body>
+    
+    <div class="header">
+        <div class="title">Depression Analysis Through Deep Learning</div>
+        <img class="titleimage" src="{% static '/images/imagetitle2.png' %}" alt="title image">
+      </div>
+
+
+      
+      
+      
+      <script type="text/javascript">
+       
+          var quotes = {{ quotes | safe }};
+          var index = 0;
+  
+          function displayQuote() {
+              document.getElementById('quote').innerHTML = quotes[index];
+              index = (index + 1) % quotes.length;
+              setTimeout(displayQuote, 3000);
+          }
+  
+          window.onload = displayQuote;
+
+         
+
+      </script>
+
+
+    {% if   nodep %}
+    <div class ="noderesult">
+        "Yayy!!, The text inputted has no symptoms of depression 🙌😁..."
+    </div>
+    {% endif %}
+
+
+    {% if dep %}
+    <div class ="deresult ">
+      "The text inputted has symptoms of depression 😒😒..."
+    </div>
+
+
+
+    <div class="disclaim blink">  Use our chatbot to get help about your mental health.</div>
+    <div class="chatbot">
+    <iframe id="myiFrame"  src="https://console.dialogflow.com/api-client/demo/embedded/1eed6e99-9fcb-440b-b5ac-35e6acdcf7a1">ChatBot</iframe>
+    </div>
+    {% endif %}
+
+
+    <div class="log">
+        <form method="post" action="{% url 'userlogout' %}">
+            {% csrf_token %}
+            <button class="butn" type="submit" >Logout</button>
+        </form>
+    </div>
+
+</body>
+</html>

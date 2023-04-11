@@ -1,0 +1,33 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/login.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/text.css' %}">
+</head>
+<body>
+
+  <div class="header">
+    <div class="title">Depression Analysis Through Deep Learning</div>
+    <img class="titleimage" src="{% static '/images/imagetitle2.png' %}" alt="title image">
+  </div>
+
+  <div class="loginform">
+    <form method="post" action="{%  url 'userlogin' %}">
+        {% csrf_token %}
+          Email Id:<input type="email" name="email" required><br><br><br>
+          Password:<input type="password" name="password" required><br><br><br>
+          <button type="submit" name="submitbtn" >Login</button><br>
+          {{error}}
+          <a href="{% url 'signup' %}">New with us?</a>
+      
+      
+        </form>
+        </div>
+</body>
+</html>

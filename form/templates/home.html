@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/text.css' %}">
+</head>
+<body>
+
+    <div class="header">
+        <div class="title">Depression Analysis Through Deep Learning</div>
+        <img class="titleimage" src="{% static '/images/imagetitle2.png' %}" alt="title image">
+      </div>
+
+    <div class="button-container">
+        <form method="get" action="{% url 'userlogin' %}">
+            {% csrf_token %}
+        <button class="button">Login</button>
+        </form>
+
+        <form method="get" action="{% url 'signup' %}">
+            {% csrf_token %}
+        <button class="button">Register </button>
+        </form>
+      </div>
+      
+</body>
+</html>
